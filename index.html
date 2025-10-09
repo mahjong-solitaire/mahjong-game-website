@@ -50,78 +50,60 @@
             opacity: 0.9;
         }
 
-.game-container {
-    max-width: 1200px;
-    margin: 3rem auto;
-    padding: 0;
-    background: rgba(139, 0, 0, 0.2);
-    border: 4px solid #d4af37;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
-    overflow: hidden;
-    position: relative;
-}
+        .game-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0;
+            background: rgba(139, 0, 0, 0.2);
+            border: 4px solid #d4af37;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+            overflow: hidden;
+            position: relative;
+        }
 
-.game-container iframe {
-    width: 100%;
-    border: none;
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-/* Desktop/Laptop screens */
-@media (min-width: 1024px) {
-    .game-container iframe {
-        height: 800px;
-    }
-}
-
-/* Tablets */
-@media (min-width: 768px) and (max-width: 1023px) {
-    .game-container {
-        margin: 2rem 1rem;
-    }
-    .game-container iframe {
-        height: 600px;
-    }
-}
-
-/* Mobile phones */
-@media (max-width: 767px) {
-    .game-container {
-        margin: 1rem 0.5rem;
-        border-radius: 8px;
-        border: 2px solid #d4af37;
-    }
-    .game-container iframe {
-        height: 70vh;
-        min-height: 500px;
-    }
-}
-
-/* Very small phones */
-@media (max-width: 480px) {
-    .game-container iframe {
-        height: 65vh;
-        min-height: 450px;
-    }
-}
-
-
-        .game-placeholder {
+        .game-container iframe {
             width: 100%;
-            height: 100%;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: #d4af37;
-            text-align: center;
-            padding: 2rem;
-            background: rgba(0,0,0,0.3);
-            border-radius: 8px;
+            border: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Desktop/Laptop screens */
+        @media (min-width: 1024px) {
+            .game-container iframe {
+                height: 750px;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .game-container {
+                margin: 2rem 1rem;
+            }
+            .game-container iframe {
+                height: 650px;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 767px) {
+            .game-container {
+                margin: 1rem 0.5rem;
+                border-radius: 8px;
+                border: 2px solid #d4af37;
+            }
+            .game-container iframe {
+                height: 580px;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 480px) {
+            .game-container iframe {
+                height: 520px;
+            }
         }
 
         .content-section {
@@ -344,27 +326,16 @@
         <h1><span class="ornament">🀄</span> Mahjong Solitaire <span class="ornament">🀄</span></h1>
     </header>
 
-<div class="game-container">
-<div class="game-container">
-   <iframe 
-    id="game-iframe"
-    src="https://mahjong-solitaire-enhanced.vercel.app/" 
-    frameborder="0"
-    allowfullscreen
-    sandbox="allow-scripts allow-same-origin allow-popups"
-    scrolling="no"
-    style="
-        width: 100%;
-        height: calc(100vh + 100px);
-        border: none;
-        display: block;
-        margin: 0;
-        padding: 0;
-    "
-></iframe>
-
-</div>
-
+    <div class="game-container">
+        <iframe 
+            id="game-iframe"
+            src="https://mahjong-solitaire-enhanced.vercel.app/" 
+            frameborder="0"
+            allowfullscreen
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            scrolling="no"
+        ></iframe>
+    </div>
 
     <div class="content-section">
         <h2>Welcome to Mahjong Solitaire</h2>
@@ -507,26 +478,25 @@
         </div>
     </footer>
 
-   <script>
-    // FAQ collapsible functionality
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', function() {
-            this.classList.toggle('active');
-            const answer = this.nextElementSibling;
-            answer.classList.toggle('active');
+    <script>
+        // FAQ collapsible functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('active');
+            });
         });
-    });
 
-    // Optional: dynamic height adjustment (if the game sends height info)
-    window.addEventListener('message', function(event) {
-        if (event.origin === 'https://mahjong-solitaire-enhanced.vercel.app') {
-            const iframe = document.getElementById('game-iframe');
-            if (iframe && event.data.height) {
-                iframe.style.height = event.data.height + 'px';
+        // Optional: dynamic height adjustment
+        window.addEventListener('message', function(event) {
+            if (event.origin === 'https://mahjong-solitaire-enhanced.vercel.app') {
+                const iframe = document.getElementById('game-iframe');
+                if (iframe && event.data.height) {
+                    iframe.style.height = event.data.height + 'px';
+                }
             }
-        }
-    });
-</script>
-
+        });
+    </script>
 </body>
 </html>
