@@ -299,13 +299,17 @@
         <h1><span class="ornament">🀄</span> Mahjong Solitaire <span class="ornament">🀄</span></h1>
     </header>
 
-    <div class="game-container">
-        <div class="game-placeholder">
-            <!-- YOUR MAHJONG GAME WILL BE EMBEDDED HERE -->
-            <!-- You can use an iframe: <iframe src="path-to-your-game/index.html" style="width:100%;height:100%;border:none;"></iframe> -->
-            <p>Your Mahjong Solitaire Game Goes Here</p>
-        </div>
-    </div>
+  <div class="game-container">
+    <iframe 
+        src="https://mahjong-solitaire-enhanced.vercel.app/" 
+        width="100%" 
+        height="100%" 
+        frameborder="0" 
+        allowfullscreen 
+        sandbox="allow-scripts allow-same-origin allow-popups"
+        style="min-height: 600px;"  <!-- Ensures it doesn't collapse if content is dynamic -->
+    ></iframe>
+</div>
 
     <div class="content-section">
         <h2>Welcome to Mahjong Solitaire</h2>
