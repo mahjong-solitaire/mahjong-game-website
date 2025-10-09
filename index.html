@@ -50,20 +50,19 @@
             opacity: 0.9;
         }
 
-        .game-container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-            min-height: 600px;
-            background: rgba(139, 0, 0, 0.2);
-            border: 4px solid #d4af37;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
+      .game-container {
+    width: 100%;  /* Full width of the page */
+    max-width: none;  /* Remove the 1200px limit */
+    margin: 3rem auto;  /* Keep centered with top/bottom spacing */
+    padding: 0;  /* No extra padding */
+    min-height: auto;  /* Let it size to the game */
+    background: none;  /* Transparent - no red background */
+    border: none;  /* No gold border */
+    box-shadow: none;  /* No shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
         .game-placeholder {
             width: 100%;
             height: 100%;
