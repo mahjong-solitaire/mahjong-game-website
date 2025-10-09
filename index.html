@@ -53,23 +53,40 @@
 .game-container {
     width: 100%;
     height: auto;
-    margin: 0 auto 3rem auto; /* Adds space below the game before content */
+    margin: 0 auto 3rem auto;
     padding: 0;
     background: none;
     border: none;
     box-shadow: none;
     overflow: hidden;
 }
+
 .game-container iframe {
     width: 100%;
-    height: calc(100vh + 40px);
-    min-height: 700px;
-    max-height: 95vh;
+    height: 100dvh; /* Correctly adjusts to visible area on phones */
+    min-height: 700px; /* Ensures buttons are visible on larger screens */
     border: none;
     display: block;
     margin: 0;
     padding: 0;
 }
+
+/* Adjustments for larger devices (like laptops & desktops) */
+@media (min-width: 1024px) {
+    .game-container iframe {
+        height: calc(100vh + 80px); /* Adds space for bottom buttons */
+        max-height: 900px; /* Prevents excessive height */
+    }
+}
+
+/* Adjustments for smaller screens (like phones) */
+@media (max-width: 768px) {
+    .game-container iframe {
+        height: 100dvh; /* Fit perfectly on mobile viewport */
+        min-height: 550px; /* Prevent being squished */
+    }
+}
+
 
 
         .game-placeholder {
