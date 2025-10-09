@@ -457,18 +457,19 @@
         </div>
     </footer>
 
-    <script>
-        // FAQ Collapsible functionality
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const answer = this.nextElementSibling;
-                answer.classList.toggle('active');
-            });
+   <script>
+    // FAQ collapsible functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', function() {
+            this.classList.toggle('active');
+            const answer = this.nextElementSibling;
+            answer.classList.toggle('active');
         });
-    <script>
+    });
+
+    // Optional: dynamic height adjustment (if the game sends height info)
     window.addEventListener('message', function(event) {
-        if (event.origin === 'https://mahjong-solitaire-enhanced.vercel.app') {  // Security: Match your game domain
+        if (event.origin === 'https://mahjong-solitaire-enhanced.vercel.app') {
             const iframe = document.getElementById('game-iframe');
             if (iframe && event.data.height) {
                 iframe.style.height = event.data.height + 'px';
@@ -476,5 +477,6 @@
         }
     });
 </script>
+
 </body>
 </html>
