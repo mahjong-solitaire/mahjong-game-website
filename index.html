@@ -296,13 +296,14 @@
 
   <div class="game-container">
 <iframe 
+    id="game-iframe"
     src="https://mahjong-solitaire-enhanced.vercel.app/" 
     width="100%" 
-    height="800px"  <!-- Start with 800px; increase to 900px or 1000px if cropped, decrease if too tall -->
+    height="600px"  <!-- Temporary fallback height while loading -->
     frameborder="0" 
     allowfullscreen 
     sandbox="allow-scripts allow-same-origin allow-popups"
-    style="display: block; margin: 0 auto; max-width: 1200px; border: none; overflow: hidden;"  <!-- Hides any potential scrollbars; centers on wide screens -->
+    style="display: block; margin: 0 auto; max-width: 1200px; border: none; overflow: hidden;"
 ></iframe>
 </div>
 
