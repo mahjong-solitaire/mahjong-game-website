@@ -50,18 +50,14 @@
             opacity: 0.9;
         }
 
-      .game-container {
-    width: 100%;  /* Full width of the page */
-    max-width: none;  /* Remove the 1200px limit */
-    margin: 3rem auto;  /* Keep centered with top/bottom spacing */
-    padding: 0;  /* No extra padding */
-    min-height: auto;  /* Let it size to the game */
-    background: none;  /* Transparent - no red background */
-    border: none;  /* No gold border */
-    box-shadow: none;  /* No shadow */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .game-container {
+    width: 100%;  /* Full page width */
+    margin: 3rem 0;  /* Top/bottom spacing only, no side margins for full bleed */
+    padding: 0;
+    background: none;
+    border: none;
+    box-shadow: none;
+    display: block;  /* Change from flex to block for simpler flow */
 }
         .game-placeholder {
             width: 100%;
