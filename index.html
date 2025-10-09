@@ -50,32 +50,63 @@
             opacity: 0.9;
         }
 
+.game-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0;
+    background: rgba(139, 0, 0, 0.2);
+    border: 4px solid #d4af37;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(212, 175, 55, 0.3);
+    overflow: hidden;
+    position: relative;
+}
+
 .game-container iframe {
     width: 100%;
-    height: calc(100vh + 60px); /* Perfect for laptops/desktops */
-    min-height: 700px;
     border: none;
     display: block;
     margin: 0;
     padding: 0;
 }
 
-/* Larger devices (desktops/laptops) */
+/* Desktop/Laptop screens */
 @media (min-width: 1024px) {
     .game-container iframe {
-        height: calc(100vh + 60px); /* Keeps bottom buttons visible */
-        max-height: 900px;
+        height: 800px;
     }
 }
 
-/* Mobile devices (phones & small tablets) */
-@media (max-width: 768px) {
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .game-container {
+        margin: 2rem 1rem;
+    }
     .game-container iframe {
-        height: 90vh; /* Shrinks slightly to fit visible area */
-        min-height: 550px;
+        height: 600px;
     }
 }
 
+/* Mobile phones */
+@media (max-width: 767px) {
+    .game-container {
+        margin: 1rem 0.5rem;
+        border-radius: 8px;
+        border: 2px solid #d4af37;
+    }
+    .game-container iframe {
+        height: 70vh;
+        min-height: 500px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+    .game-container iframe {
+        height: 65vh;
+        min-height: 450px;
+    }
+}
 
 
         .game-placeholder {
