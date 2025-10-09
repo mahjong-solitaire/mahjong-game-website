@@ -457,6 +457,15 @@
                 answer.classList.toggle('active');
             });
         });
-    </script>
+    <script>
+    window.addEventListener('message', function(event) {
+        if (event.origin === 'https://mahjong-solitaire-enhanced.vercel.app') {  // Security: Match your game domain
+            const iframe = document.getElementById('game-iframe');
+            if (iframe && event.data.height) {
+                iframe.style.height = event.data.height + 'px';
+            }
+        }
+    });
+</script>
 </body>
 </html>
