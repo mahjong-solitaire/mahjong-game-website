@@ -9,342 +9,286 @@
     <link rel="canonical" href="https://yourdomain.com/">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🀄</text></svg>">
     <title>Mahjong Solitaire - Play Free Online | Classic Tile Matching Game</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #0c72ba 0%, #499385 50%, #0c72ba 100%);
-            color: #2d3436;
-            line-height: 1.8;
-        }
-
-        header {
-            background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%);
-            padding: 2rem 0;
-            text-align: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            border-bottom: 3px solid #fdcb6e;
-        }
-
-        h1 {
-            font-size: 3rem;
-            color: #d63031;
-            text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
-
-        .subtitle {
-            color: #2d3436;
-            font-size: 1.2rem;
-            font-style: italic;
-            opacity: 0.9;
-        }
-
-        .game-container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0;
-            background: rgba(255, 234, 167, 0.3);
-            
-            border-radius: 12px;
-            box-shadow: 0 8px 32px rgba(225, 112, 85, 0.4);
-            overflow: hidden;
-            position: relative;
-        }
-
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Georgia', serif;
+        background: linear-gradient(135deg, #0c72ba 0%, #499385 50%, #0c72ba 100%);
+        color: #2d3436;
+        line-height: 1.8;
+    }
+    header {
+        background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%);
+        padding: 2rem 0;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        border-bottom: 3px solid #fdcb6e;
+    }
+    h1 {
+        font-size: 3rem;
+        color: #d63031;
+        text-shadow: 2px 2px 4px rgba(255,255,255,0.5);
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+    .subtitle {
+        color: #2d3436;
+        font-size: 1.2rem;
+        font-style: italic;
+        opacity: 0.9;
+    }
+    .game-container {
+        max-width: 1200px;
+        margin: 3rem auto;
+        padding: 0;
+        background: rgba(255, 234, 167, 0.3);
+        border-radius: 12px;
+        box-shadow: 0 8px 32px rgba(225, 112, 85, 0.4);
+        overflow: hidden;
+        position: relative;
+    }
+    .game-container iframe {
+        width: 100%;
+        border: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    /* Desktop/Laptop screens */
+    @media (min-width: 1024px) {
         .game-container iframe {
-            width: 100%;
-            border: none;
-            display: block;
-            margin: 0;
-            padding: 0;
+            height: 750px;
         }
-
-        /* Desktop/Laptop screens */
-        @media (min-width: 1024px) {
-            .game-container iframe {
-                height: 750px;
-            }
+    }
+    /* Tablets */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .game-container {
+            margin: 2rem 1rem;
         }
-
-        /* Tablets */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .game-container {
-                margin: 2rem 1rem;
-            }
-            .game-container iframe {
-                height: 650px;
-            }
+        .game-container iframe {
+            height: 650px;
         }
-
-        /* Mobile phones */
-        @media (max-width: 767px) {
-            .game-container {
-                margin: 1rem 0.5rem;
-                border-radius: 8px;
-                border: 2px solid #e17055;
-            }
-            .game-container iframe {
-                height: 580px;
-            }
-        }
-
-        /* Very small phones */
-        @media (max-width: 480px) {
-            .game-container iframe {
-                height: 520px;
-            }
-        }
-
-        .content-section {
-            max-width: 900px;
-            margin: 4rem auto;
-            padding: 3rem;
-            background: #fff8e0;
-            
+    }
+    /* Mobile phones */
+    @media (max-width: 767px) {
+        .game-container {
+            margin: 1rem 0.5rem;
             border-radius: 8px;
-            box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+            border: 2px solid #e17055;
         }
-
+        .game-container iframe {
+            height: 580px;
+        }
+    }
+    /* Very small phones */
+    @media (max-width: 480px) {
+        .game-container iframe {
+            height: 520px;
+        }
+    }
+    .content-section {
+        max-width: 900px;
+        margin: 4rem auto;
+        padding: 3rem;
+        background: #fff8e0;
+        border-radius: 8px;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+    h2 {
+        font-size: 2.2rem;
+        color: #d63031;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+        border-bottom: 3px solid #fd79a8;
+        padding-bottom: 0.5rem;
+    }
+    h3 {
+        font-size: 1.6rem;
+        color: #e17055;
+        margin: 2rem 0 1rem 0;
+    }
+    p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+    .faq-item {
+        margin-bottom: 1.5rem;
+        background: rgba(253, 203, 110, 0.3);
+        border-left: 4px solid #e17055;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    .faq-question {
+        font-size: 1.3rem;
+        color: #d63031;
+        font-weight: bold;
+        padding: 1.5rem;
+        cursor: pointer;
+        user-select: none;
+        transition: background 0.3s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-question:hover {
+        background: rgba(253, 203, 110, 0.5);
+    }
+    .faq-question::after {
+        content: '+';
+        font-size: 1.8rem;
+        color: #e17055;
+        transition: transform 0.3s ease;
+    }
+    .faq-question.active::after {
+        transform: rotate(45deg);
+    }
+    .faq-answer {
+        color: #2d3436;
+        line-height: 1.8;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        padding: 0 1.5rem;
+    }
+    .faq-answer.active {
+        max-height: 500px;
+        padding: 0 1.5rem 1.5rem 1.5rem;
+    }
+    .review-container {
+        display: grid;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .review-item {
+        background: rgba(253, 121, 168, 0.2);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 4px solid #e17055;
+    }
+    .review-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .reviewer-name {
+        font-size: 1.2rem;
+        color: #d63031;
+        font-weight: bold;
+    }
+    .review-stars {
+        color: #fdcb6e;
+        font-size: 1rem;
+    }
+    .review-text {
+        font-style: italic;
+        color: #2d3436;
+        margin-bottom: 0;
+    }
+    .social-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    .social-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: rgba(0, 184, 148, 0.3);
+        border: 2px solid #00b894;
+        border-radius: 6px;
+        color: #00b894;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    .social-button:hover {
+        background: rgba(0, 184, 148, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
+    }
+    /* FIXED: SVG STYLES - NOW WORKS ON ALL DEVICES! */
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+    .facebook-svg {
+        width: 24px;
+        height: 24px;
+        fill: #00b894;
+        transition: fill 0.3s ease;
+    }
+    .social-button:hover .facebook-svg {
+        fill: #fff;
+    }
+    .youtube-svg {
+        width: 24px;
+        height: 24px;
+        fill: #00b894;
+        transition: fill 0.3s ease;
+    }
+    .social-button:hover .youtube-svg {
+        fill: #fff;
+    }
+    .how-to-section {
+        background: #fff8e0;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 2rem auto;
+        max-width: 900px;
+    }
+    .how-to-section h3 {
+        color: #00b894;
+    }
+    ul {
+        margin: 1rem 0 1rem 2rem;
+    }
+    li {
+        margin-bottom: 0.8rem;
+        color: #2d3436;
+    }
+    strong {
+        color: #d63031;
+    }
+    footer {
+        background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%);
+        padding: 2rem;
+        text-align: center;
+        margin-top: 4rem;
+    }
+    .ornament {
+        color: #d63031;
+        font-size: 1.5rem;
+        margin: 0 1rem;
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
         h2 {
-            font-size: 2.2rem;
-            color: #d63031;
-            margin-bottom: 1.5rem;
-            text-align: center;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-            border-bottom: 3px solid #fd79a8;
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            font-size: 1.6rem;
-            color: #e17055;
-            margin: 2rem 0 1rem 0;
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            text-align: justify;
-            font-size: 1.1rem;
-        }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-            background: rgba(253, 203, 110, 0.3);
-            border-left: 4px solid #e17055;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            font-size: 1.3rem;
-            color: #d63031;
-            font-weight: bold;
-            padding: 1.5rem;
-            cursor: pointer;
-            user-select: none;
-            transition: background 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-question:hover {
-            background: rgba(253, 203, 110, 0.5);
-        }
-
-        .faq-question::after {
-            content: '+';
             font-size: 1.8rem;
-            color: #e17055;
-            transition: transform 0.3s ease;
         }
-
-        .faq-question.active::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            color: #2d3436;
-            line-height: 1.8;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            padding: 0 1.5rem;
-        }
-
-        .faq-answer.active {
-            max-height: 500px;
-            padding: 0 1.5rem 1.5rem 1.5rem;
-        }
-
-        .review-container {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .review-item {
-            background: rgba(253, 121, 168, 0.2);
+        .content-section {
             padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #e17055;
+            margin: 2rem 1rem;
         }
-
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
+        .game-container {
+            margin: 2rem 1rem;
         }
-
-        .reviewer-name {
-            font-size: 1.2rem;
-            color: #d63031;
-            font-weight: bold;
-        }
-
-        .review-stars {
-            color: #fdcb6e;
-            font-size: 1rem;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: #2d3436;
-            margin-bottom: 0;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1rem;
-        }
-
-        .social-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: rgba(0, 184, 148, 0.3);
-            border: 2px solid #00b894;
-            border-radius: 6px;
-            color: #00b894;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .social-button:hover {
-            background: rgba(0, 184, 148, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3);
-        }
-
-        .social-icon {
-            font-size: 1.3rem;
-        }
-
-        .how-to-section {
-            background: #fff8e0;
-            padding: 2rem;
-            border-radius: 8px;
-            
-            margin: 2rem auto;
-            max-width: 900px;
-        }
-
-        .how-to-section h3 {
-            color: #00b894;
-        }
-
-        ul {
-            margin: 1rem 0 1rem 2rem;
-        }
-
-        li {
-            margin-bottom: 0.8rem;
-            color: #2d3436;
-        }
-
-        strong {
-            color: #d63031;
-        }
-
-        footer {
-            background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%);
-            padding: 2rem;
-            text-align: center;
-            
-            margin-top: 4rem;
-        }
-
-        .ornament {
-            color: #d63031;
-            font-size: 1.5rem;
-            margin: 0 1rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.8rem;
-            }
-
-            .content-section {
-                padding: 1.5rem;
-                margin: 2rem 1rem;
-            }
-
-            .game-container {
-                margin: 2rem 1rem;
-            }
-            .social-icon {
-    font-size: 1.3rem;
-    width: 24px;
-    height: 24px;
-    /* Remove font-size for SVGs */
-}
-
-/* Facebook SVG */
-.facebook-svg {
-    width: 24px;
-    height: 24px;
-    fill: #00b894;
-    transition: fill 0.3s ease;
-}
-
-.social-button:hover .facebook-svg {
-    fill: #fff;
-}
-
-/* YouTube SVG */
-.youtube-svg {
-    width: 24px;
-    height: 24px;
-    fill: #00b894;
-    transition: fill 0.3s ease;
-}
-
-.social-button:hover .youtube-svg {
-    fill: #fff;
-}
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div class="bamboo-border"></div>
