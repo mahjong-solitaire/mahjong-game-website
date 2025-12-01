@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="Kr14QjS27BdTZ+TWu3l3OQ" async></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Jogue Mahjong Solitaire online gratuitamente. Domine o antigo jogo chinês de combinação de peças com nosso guia completo, regras e estratégias.">
+    <meta name="keywords" content="mahjong solitaire, jogo de mahjong, combinação de peças, jogo de quebra-cabeça, mahjong grátis">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://mahjongsolitaire-online.com/pt/">
+    <link rel="alternate" hreflang="en" href="https://mahjongsolitaire-online.com/" />
+    <link rel="alternate" hreflang="es" href="https://mahjongsolitaire-online.com/es/" />
+    <link rel="alternate" hreflang="fr" href="https://mahjongsolitaire-online.com/fr/" />
+    <link rel="alternate" hreflang="it" href="https://mahjongsolitaire-online.com/it/" />
+    <link rel="alternate" hreflang="pt" href="https://mahjongsolitaire-online.com/pt/" />
 
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🀄</text></svg>">
+    <title>Mahjong Solitaire - Jogue Grátis Online | Clássico Jogo de Combinação de Peças</title>
+    
+    <style>
+        /* CSS remains exactly the same as your main file */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #0c72ba 0%, #499385 50%, #0c72ba 100%); color: #2d3436; line-height: 1.8; }
+        header { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-bottom: 3px solid #fdcb6e; position: relative; }
+        h1 { font-size: 3rem; color: #d63031; text-shadow: 2px 2px 4px rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 0.5rem; font-weight: bold; }
+        .subtitle { color: #2d3436; font-size: 1.2rem; font-style: italic; opacity: 0.9; }
+        .language-switcher { position: absolute; top: 1rem; right: 1rem; }
+        .language-switcher select { padding: 0.5rem; font-size: 1rem; border: 2px solid #e17055; border-radius: 4px; background: #fff8e0; color: #2d3436; cursor: pointer; }
+        .language-switcher select:focus { outline: none; border-color: #d63031; }
+        .game-container { max-width: 1200px; margin: 3rem auto; padding: 0; background: rgba(255, 234, 167, 0.3); border-radius: 12px; box-shadow: 0 8px 32px rgba(225, 112, 85, 0.4); overflow: hidden; position: relative; }
+        .game-container iframe { width: 100%; border: none; display: block; margin: 0; padding: 0; }
+        @media (min-width: 1024px) { .game-container iframe { height: 750px; } }
+        @media (min-width: 768px) and (max-width: 1023px) { .game-container { margin: 2rem 1rem; } .game-container iframe { height: 650px; } }
+        @media (max-width: 767px) { .game-container { margin: 1rem 0.5rem; border-radius: 8px; border: 2px solid #e17055; } .game-container iframe { height: 580px; } }
+        @media (max-width: 480px) { .game-container iframe { height: 520px; } }
+        .content-section { max-width: 900px; margin: 4rem auto; padding: 3rem; background: #fff8e0; border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+        h2 { font-size: 2.2rem; color: #d63031; margin-bottom: 1.5rem; text-align: center; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); border-bottom: 3px solid #fd79a8; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.6rem; color: #e17055; margin: 2rem 0 1rem 0; }
+        p { margin-bottom: 1.5rem; text-align: justify; font-size: 1.1rem; }
+        .faq-item { margin-bottom: 1.5rem; background: rgba(253, 203, 110, 0.3); border-left: 4px solid #e17055; border-radius: 4px; overflow: hidden; }
+        .faq-question { font-size: 1.3rem; color: #d63031; font-weight: bold; padding: 1.5rem; cursor: pointer; user-select: none; transition: background 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { background: rgba(253, 203, 110, 0.5); }
+        .faq-question::after { content: '+'; font-size: 1.8rem; color: #e17055; transition: transform 0.3s ease; }
+        .faq-question.active::after { transform: rotate(45deg); }
+        .faq-answer { color: #2d3436; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; }
+        .faq-answer.active { max-height: 500px; padding: 0 1.5rem 1.5rem 1.5rem; }
+        .review-container { display: grid; gap: 1.5rem; margin-top: 2rem; }
+        .review-item { background: rgba(253, 121, 168, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e17055; }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .reviewer-name { font-size: 1.2rem; color: #d63031; font-weight: bold; }
+        .review-stars { color: #fdcb6e; font-size: 1rem; }
+        .review-text { font-style: italic; color: #2d3436; margin-bottom: 0; }
+        .social-links { display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+        .social-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(0, 184, 148, 0.3); border: 2px solid #00b894; border-radius: 6px; color: #00b894; text-decoration: none; font-size: 1rem; font-weight: bold; transition: all 0.3s ease; cursor: pointer; }
+        .social-button:hover { background: rgba(0, 184, 148, 0.5); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3); }
+        .social-icon { width: 24px; height: 24px; }
+        .facebook-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .facebook-svg { fill: #fff; }
+        .youtube-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .youtube-svg { fill: #fff; }
+        .how-to-section { background: #fff8e0; padding: 2rem; border-radius: 8px; margin: 2rem auto; max-width: 900px; }
+        .how-to-section h3 { color: #00b894; }
+        ul { margin: 1rem 0 1rem 2rem; }
+        li { margin-bottom: 0.8rem; color: #2d3436; }
+        strong { color: #d63031; }
+        footer { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem; text-align: center; margin-top: 4rem; }
+        footer p { text-align: center; margin-bottom: 0.5rem; }
+        .ornament { color: #d63031; font-size: 1.5rem; margin: 0 1rem; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } h2 { font-size: 1.8rem; } .content-section { padding: 1.5rem; margin: 2rem 1rem; } .game-container { margin: 2rem 1rem; } }
+    </style>
+</head>
+<body>
+    <div class="bamboo-border"></div>
+        <header>
+        <h1><span class="ornament">🀄</span> Mahjong Solitaire <span class="ornament">🀄</span></h1>
+        <div class="language-switcher">
+            <select onchange="location = this.value;" aria-label="Selecione o idioma">
+                <option value="/">English</option>
+                <option value="/es/">Español</option>
+                <option value="/fr/">Français</option>
+                <option value="/it/">Italiano</option>
+                <option value="/pt/" selected>Português</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="game-container">
+        <iframe 
+            id="game-iframe"
+            src="https://mahjong-solitaire-enhanced.vercel.app/" 
+            frameborder="0"
+            allowfullscreen
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            scrolling="no"
+        ></iframe>
+    </div>
+
+    <div class="content-section">
+        <h2>Bem-vindo ao Mahjong Solitaire</h2>
+        <p>Mahjong Solitaire, também conhecido como Shanghai Solitaire ou simplesmente Mahjong, é um jogo de quebra-cabeça cativante para um único jogador que tem encantado jogadores em todo o mundo há décadas. Diferente do Mahjong tradicional, que é jogado com quatro jogadores, o Mahjong Solitaire é um jogo de combinação de peças que desafia suas habilidades de reconhecimento de padrões, pensamento estratégico e paciência. Este jogo atemporal remonta à China antiga, onde as peças de Mahjong têm sido usadas por séculos em vários jogos tradicionais.</p>
+        <p>A beleza do Mahjong Solitaire reside na sua elegância e simplicidade combinadas com uma profundidade surpreendente. Cada jogo apresenta uma pirâmide ou um layout de peças cuidadosamente organizado, empilhado em várias camadas. Seu objetivo é limpar o tabuleiro combinando pares de peças idênticas, mas há uma condição: você só pode selecionar peças que estão livres em pelo menos um lado e não estão cobertas por outras peças acima delas. Essa regra aparentemente simples cria um quebra-cabeça complexo que requer planejamento cuidadoso e visão de futuro.</p>
+        <p>O que torna o Mahjong Solitaire tão duradouro e popular é o seu equilíbrio perfeito entre relaxamento e estimulação mental. O jogo oferece uma qualidade meditativa enquanto você examina os intrincados padrões das peças, procurando pares correspondentes entre os belos símbolos tradicionais chineses. Cada peça apresenta imagens clássicas de Mahjong, incluindo bambu, círculos, caracteres, ventos, dragões, flores e estações. Esses desenhos ornamentados não apenas tornam o jogo visualmente atraente, mas também conectam os jogadores a séculos de herança cultural chinesa.</p>
+        <p>Seja você um iniciante total ou um jogador experiente, o Mahjong Solitaire oferece entretenimento infinito e exercício mental. O jogo aguça sua concentração, melhora a percepção visual e fortalece as habilidades de memória à medida que você aprende a identificar rapidamente as peças correspondentes entre os layouts complexos. Cada jogo é diferente, com inúmeros arranjos de peças possíveis que garantem que você nunca jogará o mesmo jogo duas vezes. A satisfação de limpar com sucesso um layout desafiador é profundamente gratificante, tornando o desejo de jogar mais uma partida quase irresistível.</p>
+        <p>As versões online modernas de Mahjong Solitaire tornaram este jogo clássico mais acessível do que nunca. Agora você pode desfrutar de jogos ilimitados a qualquer hora e em qualquer lugar, com recursos como dicas, opções de embaralhamento e desfazer movimentos que tornam a experiência agradável para jogadores de todos os níveis de habilidade. O formato digital preserva todo o charme do jogo tradicional enquanto adiciona conveniências que melhoram a jogabilidade. Quer você tenha cinco minutos ou uma hora de sobra, o Mahjong Solitaire oferece uma fuga perfeita para um mundo de estratégia, combinação de padrões e contemplação tranquila que cativou gerações de entusiastas de quebra-cabeças em todo o mundo.</p>
+    </div>
+
+    <div class="content-section how-to-section">
+        <h2>Como jogar Mahjong Solitaire</h2>
+        <h3>Objetivo do jogo</h3>
+        <p>O objetivo do Mahjong Solitaire é simples: remover todas as peças do tabuleiro combinando pares de peças idênticas. Uma peça é considerada 'livre' e pode ser selecionada quando atende a duas condições: ela tem pelo menos um lado longo (esquerdo ou direito) completamente livre, sem peças adjacentes, e não tem peças por cima.</p>
+        <h3>Regras básicas</h3>
+        <ul>
+            <li><strong>Combine peças idênticas:</strong> Clique em duas peças que exibem o mesmo símbolo ou padrão para removê-las do tabuleiro. As peças devem ser idênticas.</li>
+            <li><strong>Apenas peças livres:</strong> Você só pode selecionar peças que não estejam bloqueadas por outras peças. Uma peça está livre quando seu lado esquerdo ou direito está completamente aberto e não há nada empilhado sobre ela.</li>
+            <li><strong>Peças especiais:</strong> As peças de Flores e Estações são únicas. Qualquer peça de Flor pode ser combinada com qualquer outra peça de Flor, e qualquer peça de Estação pode ser combinada com qualquer outra peça de Estação, mesmo que exibam designs diferentes.</li>
+            <li><strong>Planejamento estratégico:</strong> Pense antes de fazer combinações. Certos movimentos podem bloquear outras peças e tornar o jogo impossível de completar.</li>
+            <li><strong>Sem limite de tempo:</strong> Leve o seu tempo para analisar o tabuleiro e planejar seus movimentos cuidadosamente. O Mahjong Solitaire é sobre estratégia, não sobre velocidade.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Dicas para o sucesso</h2>
+        <ul>
+            <li>Sempre priorize a remoção de peças das camadas superiores primeiro para liberar mais peças por baixo.</li>
+            <li>Concentre-se em eliminar peças que bloqueiam o maior número de outras peças.</li>
+            <li>Tente manter suas opções abertas mantendo múltiplas combinações possíveis no tabuleiro.</li>
+            <li>Use os recursos de dica quando disponíveis se ficar preso, mas tente resolver os quebra-cabeças por conta própria para uma melhor experiência.</li>
+            <li>Se não houver mais movimentos disponíveis, use o recurso de embaralhamento (se disponível) para reorganizar as peças restantes.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>O que os jogadores estão dizendo</h2>
+        <div class="review-container">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Sarah M.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Eu jogo Mahjong Solitaire há anos, e esta é de longe a melhor versão que encontrei online. As peças são lindamente projetadas e a jogabilidade é suave e relaxante. Tornou-se parte da minha rotina diária, perfeito para descontrair após um longo dia de trabalho!</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">James T.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Como alguém novo no Mahjong Solitaire, eu realmente apreciei a facilidade de aprender. A interface é intuitiva e eu amo a estética asiática tradicional. Estou viciado há semanas, e minhas habilidades de reconhecimento de padrões melhoraram notavelmente!</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Linda K.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Este jogo é absolutamente fantástico! Eu jogo todas as manhãs com meu café. É desafiador o suficiente para me manter engajada, mas não tão difícil a ponto de me frustrar. A música suave e os belos designs das peças o tornam uma experiência verdadeiramente agradável.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Robert H.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Tenho 67 anos e minha filha me recomendou isso para manter minha mente afiada. Não consigo acreditar o quão viciante este quebra-cabeça é! O jogo funciona perfeitamente no meu tablet, e eu adoro que não há pressão de tempo. Eu o recomendo fortemente para quem procura um ótimo exercício mental.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Perguntas frequentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">Qual é a diferença entre Mahjong e Mahjong Solitaire?</div>
+            <div class="faq-answer">O Mahjong tradicional é um jogo de estratégia para quatro jogadores que envolve habilidade, estratégia e cálculo, semelhante ao jogo de cartas Rummy. O Mahjong Solitaire, por outro lado, é um jogo de quebra-cabeça de combinação de peças para um único jogador que usa peças de Mahjong, mas com regras e jogabilidade completamente diferentes. Enquanto o Mahjong tradicional envolve puxar e descartar peças para formar combinações específicas, o Mahjong Solitaire se concentra apenas em combinar pares de peças livres para limpar o tabuleiro.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Todos os jogos de Mahjong Solitaire são vencíveis?</div>
+            <div class="faq-answer">Nem todos os layouts de Mahjong Solitaire são garantidos de serem solucionáveis. O resultado depende do arranjo inicial das peças e dos movimentos que você faz durante o jogo. No entanto, a maioria dos jogos bem projetados usa layouts que são vencíveis com a estratégia certa. Se você se encontrar preso, muitas versões online oferecem recursos de embaralhamento ou dicas para ajudá-lo a continuar jogando.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Quantas peças há no Mahjong Solitaire?</div>
+            <div class="faq-answer">Um jogo padrão de Mahjong Solitaire usa 144 peças, o mesmo número encontrado em um conjunto completo de Mahjong. Essas peças incluem 36 peças de Círculos, 36 peças de Bambu, 36 peças de Caracteres, 16 peças de Ventos, 12 peças de Dragões, 4 peças de Flores e 4 peças de Estações. Cada peça (exceto Flores e Estações) aparece exatamente quatro vezes no conjunto.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">As peças de Flores e Estações podem ser combinadas entre si?</div>
+            <div class="faq-answer">As peças de Flores podem ser combinadas com qualquer outra peça de Flor, e as peças de Estações podem ser combinadas com qualquer outra peça de Estação, mesmo que exibam designs diferentes. No entanto, as peças de Flores não podem ser combinadas com as peças de Estações. Esta regra especial para essas peças adiciona um elemento estratégico interessante ao jogo, pois oferece mais flexibilidade ao planejar seus movimentos.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Qual é a melhor estratégia para vencer no Mahjong Solitaire?</div>
+            <div class="faq-answer">As principais estratégias incluem: priorizar peças que bloqueiam o maior número de outras peças, remover peças das camadas superiores primeiro para criar mais opções por baixo, manter múltiplas possibilidades de combinação para evitar ficar preso e pensar alguns movimentos à frente antes de fazer uma combinação. Também é útil identificar e remover peças das bordas e cantos logo no início, pois estas tendem a ser as mais restritivas. Com a prática, você desenvolverá habilidades de reconhecimento de padrões que tornam o planejamento estratégico mais intuitivo.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">O Mahjong Solitaire é bom para o treinamento cerebral?</div>
+            <div class="faq-answer">Sim, o Mahjong Solitaire é excelente para o treinamento cerebral e a saúde cognitiva. O jogo melhora a percepção visual, o reconhecimento de padrões, a memória, a concentração e as habilidades de pensamento estratégico. Jogar regularmente pode ajudar a manter a agudeza mental e pode até ajudar a reduzir o declínio cognitivo. O jogo fornece estimulação mental sem ser estressante, tornando-o um exercício ideal para jogadores de todas as idades que desejam manter suas mentes ativas e engajadas.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Quanto tempo dura um jogo típico de Mahjong Solitaire?</div>
+            <div class="faq-answer">Um jogo típico de Mahjong Solitaire pode durar de 5 a 20 minutos, dependendo da complexidade do layout, do seu nível de habilidade e de quão cuidadosamente você planeja seus movimentos. Iniciantes podem levar mais tempo enquanto aprendem a identificar peças correspondentes e desenvolvem estratégias, enquanto jogadores experientes frequentemente conseguem completar os jogos mais rapidamente. A flexibilidade do tempo de jogo torna o Mahjong Solitaire perfeito tanto para pausas rápidas quanto para sessões de jogo mais longas.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Posso jogar Mahjong Solitaire em dispositivos móveis?</div>
+            <div class="faq-answer">Sim, Mahjong Solitaire está amplamente disponível em dispositivos móveis por meio de navegadores web e aplicativos dedicados. A maioria das versões online modernas é projetada para ser responsiva e funciona perfeitamente em smartphones e tablets, com controles de toque que tornam a seleção e a combinação de peças intuitivas e fáceis. Essa portabilidade torna conveniente aproveitar um jogo onde quer que você esteja, seja em deslocamento, relaxando em casa ou fazendo uma pausa durante o dia.</div>
+        </div>
+    </div>
+
+    <div class="bamboo-border"></div>
+    <footer>
+        <p>© 2025 Mahjong Solitaire. Desfrute da antiga arte de combinar peças.</p>
+        <p>🀄 Que suas combinações sejam rápidas e sua estratégia sábia 🀄</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61582565007493" class="social-button" target="_blank">
+                <svg class="facebook-svg" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Facebook</span>
+            </a>
+            <a href="https://youtube.com/yourchannel" class="social-button" target="_blank">
+                <svg class="youtube-svg" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>YouTube</span>
+            </a>
+        </div>
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="https://findly.tools/mahjong-solitaire-online-game?utm_source=mahjong-solitaire-online-game" target="_blank" rel="nofollow">
+                <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on findly.tools" width="150" style="display: inline-block;">
+            </a>
+            <a href="https://turbo0.com/item/mahjong-solitaire" target="_blank" rel="noopener noreferrer">
+                <img src="https://img.turbo0.com/badge-listed-light.svg" alt="Listed on Turbo0" style="height: 54px; width: auto;">
+            </a>
+            <a href="https://toolfio.com/games/mahjong-solitaire" target="_blank" rel="noopener">
+                <img src="https://toolfio.com/toolfio-badge.svg" alt="Featured on Toolfio" width="150" height="54">
+            </a>
+            <a href="https://www.showmysites.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.showmysites.com/static/backlink/logo.webp" alt="ShowMySites Badge" width="40" height="40">
+            </a>
+            <a target="_blank" href="https://trustiner.com"><img src="https://trustiner.com/assets/images/badge.png" alt="Trustiner" height="54"></a>
+            <a target="_blank" href="https://weliketools.com"><img src="https://weliketools.com/assets/images/badge.png" alt="We Like Tools" height="54"></a>
+            <a target="_blank" href="https://startupvessel.com"><img src="https://startupvessel.com/assets/images/badge.png" alt="Startup Vessel" height="54"></a>
+            <a target="_blank" href="https://aixcollection.com"><img src="https://aixcollection.com/assets/images/badge.png" alt="AI X Collection" height="54"></a>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Script
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
