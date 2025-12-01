@@ -21,7 +21,7 @@
     <title>Mahjong Solitaire - Play Free Online | Classic Tile Matching Game</title>
     
     <style>
-        /* CSS remains exactly the same as your other files */
+        /* CSS to restore the boxed layout and collapsible FAQ design */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #0c72ba 0%, #499385 50%, #0c72ba 100%); color: #2d3436; line-height: 1.8; }
         header { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-bottom: 3px solid #fdcb6e; position: relative; }
@@ -40,32 +40,40 @@
         h2 { font-size: 2.2rem; color: #d63031; margin-bottom: 1.5rem; text-align: center; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); border-bottom: 3px solid #fd79a8; padding-bottom: 0.5rem; }
         h3 { font-size: 1.6rem; color: #e17055; margin: 2rem 0 1rem 0; }
         p { margin-bottom: 1.5rem; text-align: justify; font-size: 1.1rem; }
+        
+        /* FAQ Styling */
         .faq-item { margin-bottom: 1.5rem; background: rgba(253, 203, 110, 0.3); border-left: 4px solid #e17055; border-radius: 4px; overflow: hidden; }
         .faq-question { font-size: 1.3rem; color: #d63031; font-weight: bold; padding: 1.5rem; cursor: pointer; user-select: none; transition: background 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
         .faq-question:hover { background: rgba(253, 203, 110, 0.5); }
         .faq-question::after { content: '+'; font-size: 1.8rem; color: #e17055; transition: transform 0.3s ease; }
-        .faq-question.active::after { transform: rotate(45deg); }
+        .faq-question.active::after { content: '−'; transform: rotate(0deg); } /* Changed to minus sign */
         .faq-answer { color: #2d3436; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; }
         .faq-answer.active { max-height: 500px; padding: 0 1.5rem 1.5rem 1.5rem; }
+        .faq-answer p { margin-bottom: 0; } /* Remove extra margin from last p in answer */
+        
+        /* Review Styling */
         .review-container { display: grid; gap: 1.5rem; margin-top: 2rem; }
         .review-item { background: rgba(253, 121, 168, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e17055; }
         .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
         .reviewer-name { font-size: 1.2rem; color: #d63031; font-weight: bold; }
         .review-stars { color: #fdcb6e; font-size: 1rem; }
         .review-text { font-style: italic; color: #2d3436; margin-bottom: 0; }
-        .social-links { display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
-        .social-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(0, 184, 148, 0.3); border: 2px solid #00b894; border-radius: 6px; color: #00b894; text-decoration: none; font-size: 1rem; font-weight: bold; transition: all 0.3s ease; cursor: pointer; }
-        .social-button:hover { background: rgba(0, 184, 148, 0.5); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3); }
-        .social-icon { width: 24px; height: 24px; }
-        .facebook-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
-        .social-button:hover .facebook-svg { fill: #fff; }
-        .youtube-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
-        .social-button:hover .youtube-svg { fill: #fff; }
+        
+        /* How-To Section Styling */
         .how-to-section { background: #fff8e0; padding: 2rem; border-radius: 8px; margin: 2rem auto; max-width: 900px; }
         .how-to-section h3 { color: #00b894; }
         ul { margin: 1rem 0 1rem 2rem; }
         li { margin-bottom: 0.8rem; color: #2d3436; }
         strong { color: #d63031; }
+
+        /* Footer/Social Styling */
+        .social-links { display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+        .social-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(0, 184, 148, 0.3); border: 2px solid #00b894; border-radius: 6px; color: #00b894; text-decoration: none; font-size: 1rem; font-weight: bold; transition: all 0.3s ease; cursor: pointer; }
+        .social-button:hover { background: rgba(0, 184, 148, 0.5); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3); }
+        .facebook-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .facebook-svg { fill: #fff; }
+        .youtube-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .youtube-svg { fill: #fff; }
         footer { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem; text-align: center; margin-top: 4rem; }
         footer p { text-align: center; margin-bottom: 0.5rem; }
         .ornament { color: #d63031; font-size: 1.5rem; margin: 0 1rem; }
@@ -100,58 +108,86 @@
 
     <div class="content-section">
         <h2>Welcome to Mahjong Solitaire - Free Online Mahjong Game</h2>
-        <p>Play mahjong solitaire online for free with no download or registration required. Mahjong solitaire, also known as mahjongg solitaire or Shanghai solitaire, is a captivating single-player game that has enchanted players around the world for decades. Unlike traditional mahjong, which is played with four players, this solitaire game is a tile-matching puzzle that challenges your pattern recognition skills, strategic thinking, and patience. This timeless solitaire online game traces its roots back to ancient China, where mahjong tiles have been used for centuries in various traditional Chinese games.</p>
-        <p>The beauty of this mahjong solitaire game lies in its elegant simplicity combined with surprising depth. Each layout presents you with a carefully arranged pyramid of tiles, stacked in multiple layers. Your goal is to clear the board by matching pairs of identical tiles, but there's a catch: you can only select free tiles that have at least one side open (left or right side) and are not covered by tiles on top. This seemingly simple rule creates a complex mahjong puzzle that requires you to plan ahead and think several moves in advance.</p>
-        <p>What makes mahjongg solitaire so enduringly popular is its perfect balance of relaxation and mental stimulation. The puzzle game offers a meditative quality as you scan the intricate stacks of tiles, searching for matching pairs among the beautiful traditional Chinese symbols. Each tile features classic mahjong imagery including bamboo, circles, characters, winds, dragons, flowers, and seasons. These ornate designs not only make the solitaire game visually appealing but also connect players to centuries of Chinese cultural heritage.</p>
-        <p>Whether you're making your first move or you're a seasoned player, play mahjong solitaire for endless entertainment and mental exercise. This matching game sharpens your concentration, improves visual perception, and enhances memory skills as you learn to quickly spot matching tiles among the complex layouts. Each game played is different, with countless possible tile configurations ensuring unique challenges every time. The satisfaction of successfully clearing a challenging layout is deeply rewarding, making just one more game almost irresistible.</p>
-        <p>Modern online game versions have made this classic game more accessible than ever before. You can play online anytime, anywhere in full screen mode, with features like hints, shuffle options, and undo moves that enhance your gaming experience. The digital format preserves all the charm of regular mahjong while adding conveniences that improve gameplay. Whether you have five minutes or an hour to spare, this mahjong solitaire offers a perfect escape into a world of strategy and quiet contemplation.</p>
-        
+        <p>Play **mahjong solitaire online for free** with no download or registration required. **Mahjong solitaire**, also known as **mahjongg solitaire** or Shanghai solitaire, is a captivating single-player game that has enchanted players around the world for decades. Unlike traditional mahjong, which is played with four players, this **solitaire game** is a **tile-matching puzzle** that challenges your pattern recognition skills, strategic thinking, and patience. This timeless solitaire online game traces its roots back to ancient China, where mahjong tiles have been used for centuries in various traditional Chinese games.</p>
+        <p>The beauty of this **mahjong solitaire game** lies in its elegant simplicity combined with surprising depth. Each layout presents you with a carefully arranged pyramid of tiles, stacked in multiple layers. Your goal is to clear the board by matching pairs of identical tiles, but there's a catch: you can only select **free tiles** that have at least one side open (left or right side) and are not covered by tiles on top. This seemingly simple rule creates a complex **mahjong puzzle** that requires you to plan ahead and think several moves in advance.</p>
+        <p>What makes **mahjongg solitaire** so enduringly popular is its perfect balance of relaxation and mental stimulation. The puzzle game offers a meditative quality as you scan the intricate stacks of tiles, searching for matching pairs among the beautiful traditional Chinese symbols. Each tile features classic mahjong imagery including bamboo, circles, characters, winds, dragons, flowers, and seasons. These ornate designs not only make the solitaire game visually appealing but also connect players to centuries of Chinese cultural heritage.</p>
+        <p>Whether you're making your first move or you're a seasoned player, **play mahjong solitaire** for endless entertainment and mental exercise. This **matching game** sharpens your concentration, improves visual perception, and enhances memory skills as you learn to quickly spot matching tiles among the complex layouts. Each game played is different, with countless possible tile configurations ensuring unique challenges every time. The satisfaction of successfully clearing a challenging layout is deeply rewarding, making just one more game almost irresistible.</p>
+        <p>Modern **online game** versions have made this classic game more accessible than ever before. You can **play online** anytime, anywhere in **full screen** mode, with features like hints, **shuffle options**, and undo moves that enhance your gaming experience. The digital format preserves all the charm of regular mahjong while adding conveniences that improve gameplay. Whether you have five minutes or an hour to spare, this **mahjong solitaire** offers a perfect escape into a world of strategy and quiet contemplation.</p>
+    </div>
+    
+    <div class="content-section how-to-section">
         <h2>How to Play Mahjong Solitaire Game</h2>
         <h3>Game Objective and Gameplay</h3>
-        <p>The goal is to clear all tiles from the board by matching two identical tiles at a time. A tile is considered free and can be selected when it meets two conditions: at least one side needs to be open (left or right) with no adjacent tiles blocking it, and it has no tiles stacked on top of it. This version of mahjong solitaire combines strategy with pattern recognition to create an engaging puzzle experience.</p>
+        <p>The goal is to clear all tiles from the board by matching two identical tiles at a time. A tile is considered free and can be selected when it meets two conditions: at least **one side needs to be open** (left or right side) with no adjacent tiles blocking it, and it has **no tiles stacked on top** of it. This version of **mahjong solitaire** combines strategy with pattern recognition to create an engaging puzzle experience.</p>
         <h3>Basic Rules to Match Tiles</h3>
         <ul>
-            <li><strong>Match the Tiles:</strong> Click on two tiles that show the same symbol or pattern to remove them from the board. Find a match among the 144 tiles to progress through the game. The tiles must be exact matches to clear successfully.</li>
-            <li><strong>Free Tiles Only:</strong> You can only select open tiles that are not blocked. A tile is blocked when tiles underneath or adjacent to it prevent movement. Only match tiles that have at least one open side and nothing on top.</li>
-            <li><strong>Special Tiles - Seasons and Flowers:</strong> Season tiles are unique - any season tile can match with any other season tile. Similarly, flower tiles can match with other flower tiles, even if they show different designs. However, flowers and seasons cannot match each other.</li>
-            <li><strong>Strategic Planning:</strong> Think ahead and prioritize removing tiles that block the most other tiles. Some moves may create situations where you get stuck and make the mahjong puzzle impossible to complete.</li>
-            <li><strong>No Time Limit:</strong> Take your time to analyze the tile set and plan your moves carefully. This solitaire game is about strategy, not speed, allowing you to enjoy a relaxed gaming experience.</li>
+            <li>**Match the Tiles:** Click on two tiles that show the same symbol or pattern to remove them from the board. Find a match among the 144 tiles to progress through the game. The tiles must be exact matches to clear successfully.</li>
+            <li>**Free Tiles Only:** You can only select open tiles that are not blocked. A tile is blocked when tiles underneath or adjacent to it prevent movement. Only match tiles that have at least one open side and nothing on top.</li>
+            <li>**Special Tiles - Seasons and Flowers:** **Season tiles** are unique - any season tile can match with any other season tile. Similarly, **flower tiles** can match with other flower tiles, even if they show different designs. However, flowers and seasons cannot match each other.</li>
+            <li>**Strategic Planning:** Think ahead and prioritize removing tiles that block the most other tiles. Some moves may create situations where you get stuck and make the **mahjong puzzle** impossible to complete.</li>
+            <li>**No Time Limit:** Take your time to analyze the tile set and plan your moves carefully. This **solitaire game** is about strategy, not speed, allowing you to enjoy a relaxed gaming experience.</li>
         </ul>
-
+    </div>
+    
+    <div class="content-section">
         <h2>Mahjong Tips to Win Mahjong Solitaire</h2>
         <ul>
-            <li>Always prioritize removing tiles from the top layers first to free up new tiles below and create more matching opportunities.</li>
-            <li>Focus on eliminating tiles that block the most other tiles in the stacks of tiles, opening up more of the layout for play.</li>
-            <li>Try to keep your options open by maintaining multiple possible matching pairs on the board to avoid getting trapped.</li>
-            <li>Use the hint feature when available if you get stuck, but challenge yourself to spot matching tiles on your own for the best experience.</li>
-            <li>If no more moves are available, use the shuffle feature to rearrange remaining tiles and continue your game.</li>
+            <li>Always prioritize removing tiles from the **top layers first** to free up new tiles below and create more matching opportunities.</li>
+            <li>Focus on **eliminating tiles that block the most** other tiles in the stacks of tiles, opening up more of the layout for play.</li>
+            <li>Try to **keep your options open** by maintaining multiple possible matching pairs on the board to avoid getting trapped.</li>
+            <li>Use the **hint feature** when available if you get stuck, but challenge yourself to spot matching tiles on your own for the best experience.</li>
+            <li>If no more moves are available, use the **shuffle feature** to rearrange remaining tiles and continue your game.</li>
             <li>Pay special attention to tiles underneath the main pyramid structure, as these can become difficult to access later.</li>
             <li>When matching two tiles, consider how removing them will affect tiles stacked above or adjacent to them.</li>
         </ul>
-
+        
         <h2>Solitaire Features and Gameplay Options</h2>
-        <p>Our free online mahjong solitaire offers an enhanced gaming experience with multiple features designed to make your play sessions more enjoyable:</p>
+        <p>Our **free online mahjong solitaire** offers an enhanced gaming experience with multiple features designed to make your play sessions more enjoyable:</p>
         <ul>
-            <li><strong>Play Online for Free:</strong> Enjoy unlimited games with no download or registration required. Play mahjongg solitaire instantly in your browser.</li>
-            <li><strong>Full Screen Mode:</strong> Maximize your view and immerse yourself in the game with full screen gameplay for the best visual experience.</li>
-            <li><strong>Multiple Layouts:</strong> Choose from various tile configurations and layout options, each presenting unique challenges and requiring different strategies.</li>
-            <li><strong>Shuffle Function:</strong> When you get stuck, shuffle the remaining tiles to create new matching possibilities and continue playing.</li>
-            <li><strong>Hint System:</strong> Use the hint button to highlight two tiles you can match when you need assistance finding your next move.</li>
-            <li><strong>Personal Statistics:</strong> Track your progress, wins, and playing time to monitor your improvement over time.</li>
+            <li>**Play Online for Free:** Enjoy unlimited games with **no download or registration required**. Play mahjongg solitaire instantly in your browser.</li>
+            <li>**Full Screen Mode:** Maximize your view and immerse yourself in the game with **full screen** gameplay for the best visual experience.</li>
+            <li>**Multiple Layouts:** Choose from various tile configurations and layout options, each presenting unique challenges and requiring different strategies.</li>
+            <li>**Shuffle Function:** When you get stuck, **shuffle** the remaining tiles to create new matching possibilities and continue playing.</li>
+            <li>**Hint System:** Use the hint button to highlight two tiles you can match when you need assistance finding your next move.</li>
+            <li>**Personal Statistics:** Track your progress, wins, and playing time to monitor your improvement over time.</li>
         </ul>
-
+    </div>
+    
+    <div class="content-section">
         <h2>What Players Are Saying About Our Solitaire Game</h2>
-        <h3>Sarah M.</h3>
-        <p>I've been playing mahjong solitaire for years, and this is by far the best version I've found to play online. The tiles are beautifully designed, and the gameplay is smooth and relaxing. It's become part of my daily routine - perfect for unwinding after a long day at work! The full screen option and shuffle feature make it even better.</p>
-        <h3>James T.</h3>
-        <p>As someone new to mahjongg solitaire, I really appreciated how easy it was to learn this matching game. The interface is intuitive, and I love the traditional Asian aesthetic. I've been hooked for weeks now and my ability to spot matching tiles has noticeably improved! Playing this puzzle game has become my favorite way to relax.</p>
-        <h3>Linda K.</h3>
-        <p>This mahjong game is absolutely fantastic! I play mahjong solitaire every morning with my coffee. It's challenging enough to keep me engaged but not so difficult that it becomes frustrating. The calming music and beautiful tile designs make it a truly enjoyable solitaire online experience.</p>
-        <h3>Robert H.</h3>
-        <p>I'm 67 years old and my daughter recommended this to help keep my mind sharp. I can't believe how addictive this puzzle is! The online game runs perfectly on my tablet, and I love that there's no time pressure. The fact that I can play mahjong for free without any download makes it incredibly convenient. Highly recommend for anyone looking for a great brain exercise.</p>
+        <div class="review-container">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Sarah M.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">I've been playing mahjong solitaire for years, and this is by far the best version I've found to play online. The tiles are beautifully designed, and the gameplay is smooth and relaxing. It's become part of my daily routine - perfect for unwinding after a long day at work! The full screen option and shuffle feature make it even better.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">James T.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">As someone new to mahjongg solitaire, I really appreciated how easy it was to learn this matching game. The interface is intuitive, and I love the traditional Asian aesthetic. I've been hooked for weeks now and my ability to spot matching tiles has noticeably improved! Playing this puzzle game has become my favorite way to relax.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Linda K.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">This mahjong game is absolutely fantastic! I play mahjong solitaire every morning with my coffee. It's challenging enough to keep me engaged but not so difficult that it becomes frustrating. The calming music and beautiful tile designs make it a truly enjoyable solitaire online experience.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Robert H.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">I'm 67 years old and my daughter recommended this to help keep my mind sharp. I can't believe how addictive this puzzle is! The online game runs perfectly on my tablet, and I love that there's no time pressure. The fact that I can play mahjong for free without any download makes it incredibly convenient. Highly recommend for anyone looking for a great brain exercise.</p>
+            </div>
+        </div>
         
         <h2>Understanding the Mahjong Tile Set</h2>
-        <p>A standard mahjong solitaire game uses 144 tiles, which is the same number found in a complete traditional mahjong set. The tile set includes:</p>
+        <p>A standard **mahjong solitaire game** uses **144 tiles**, which is the same number found in a complete traditional mahjong set. The tile set includes:</p>
         <ul>
             <li>36 Circle tiles (also called Dots) - numbered 1 through 9, with four of each</li>
             <li>36 Bamboo tiles (also called Sticks) - numbered 1 through 9, with four of each</li>
@@ -162,25 +198,52 @@
             <li>4 Season tiles - Spring, Summer, Autumn, and Winter</li>
         </ul>
         <p>Each tile (except flowers and seasons) appears exactly four times in the configuration, allowing for strategic planning when you match tiles and clear the board by matching pairs.</p>
-        
-        <h2>Frequently Asked Questions About Mahjongg Solitaire</h2>
-        <h3>What is the difference between traditional Mahjong and Mahjong Solitaire?</h3>
-        <p>Traditional mahjong is a four-player strategy game involving skill, calculation, and tile drawing, similar to the card game Rummy. Mahjong solitaire, on the other hand, is a single-player game that uses mahjong tiles but has completely different rules and gameplay. While regular mahjong involves drawing and discarding tiles to form specific combinations, this solitaire game focuses solely on matching two identical tiles to clear the layout. Mahjong is considered a social game, while mahjongg solitaire is a solo puzzle experience.</p>
-        <h3>Are all Mahjong Solitaire layouts winnable?</h3>
-        <p>Not all mahjong puzzle layouts are guaranteed to be solvable. The outcome depends on the initial tile arrangement and the moves you make during gameplay. However, most well-designed online for free versions use layouts that can win mahjong solitaire with the right strategy. If you get stuck and can't find a match, many versions offer shuffle or hint features to help you continue playing and clear tiles from the board.</p>
-        <h3>How do I know which tiles to match first?</h3>
-        <p>To win mahjong solitaire, prioritize matching tiles that free up the most other tiles. Focus on removing tiles stacked on top of others and those blocking multiple potential matches. Look for three identical tiles visible at once - this indicates one will remain after matching two tiles, so plan accordingly. The key is to maintain multiple matching options and avoid creating situations where tiles underneath become permanently blocked.</p>
-        <h3>Can I play this solitaire game on mobile devices?</h3>
-        <p>Yes, you can play mahjongg solitaire online on mobile devices through web browsers. This online mahjong game is designed to be responsive and works seamlessly on smartphones and tablets. The touch controls make it easy to spot matching tiles and select them intuitively. This portability means you can enjoy the puzzle game wherever you are, with the same full screen and shuffle features available on desktop.</p>
-        <h3>Do I need to download anything to play mahjong online?</h3>
-        <p>No download or registration is required to play mahjong solitaire for free on our site. Simply visit the page and start playing immediately in your browser. This makes it convenient to enjoy the solitaire online game anytime without installing software or creating an account. Just click and play online for free with instant access to all solitaire features.</p>
-        <h3>What are the special rules for Flower and Season tiles?</h3>
-        <p>In this matching game, flower tiles can match with any other flower tile, and season tiles can match with any other season tile, even though they display different designs. However, flowers and seasons cannot match each other. This special rule adds strategic flexibility when you play mahjong solitaire, as these tiles provide more options when planning your moves in the puzzle.</p>
-        <h3>How long does a typical game take to play?</h3>
-        <p>A typical game played can take anywhere from 5 to 20 minutes, depending on the layout complexity, your skill level, and how carefully you plan ahead. Beginners may take longer as they learn to identify matching pairs and develop strategies to match the tiles effectively. Experienced players who regularly play mahjongg solitaire can often complete layouts more quickly. The flexible time frame makes this solitaire game perfect for both quick breaks and longer gaming sessions.</p>
-        <h3>Is Mahjongg Solitaire good for brain training?</h3>
-        <p>Yes, this mahjong puzzle is excellent for brain training and cognitive health. The puzzle game improves visual perception, pattern recognition, memory, concentration, and strategic thinking skills. Regular play can help maintain mental sharpness and may even help reduce cognitive decline. The game combines mental stimulation without being stressful, making it an ideal exercise for players of all ages who want to keep their minds active and engaged through this classic game.</p>
     </div>
+
+    <div class="content-section">
+        <h2>Frequently Asked Questions About Mahjongg Solitaire</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">What is the difference between traditional Mahjong and Mahjong Solitaire?</div>
+            <div class="faq-answer"><p>Traditional mahjong is a four-player strategy game involving skill, calculation, and tile drawing, similar to the card game Rummy. Mahjong solitaire, on the other hand, is a single-player game that uses mahjong tiles but has completely different rules and gameplay. While regular mahjong involves drawing and discarding tiles to form specific combinations, this solitaire game focuses solely on matching two identical tiles to clear the layout. Mahjong is considered a social game, while mahjongg solitaire is a solo puzzle experience.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Are all Mahjong Solitaire layouts winnable?</div>
+            <div class="faq-answer"><p>Not all mahjong puzzle layouts are guaranteed to be solvable. The outcome depends on the initial tile arrangement and the moves you make during gameplay. However, most well-designed online for free versions use layouts that can win mahjong solitaire with the right strategy. If you get stuck and can't find a match, many versions offer shuffle or hint features to help you continue playing and clear tiles from the board.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How do I know which tiles to match first?</div>
+            <div class="faq-answer"><p>To win mahjong solitaire, prioritize matching tiles that free up the most other tiles. Focus on removing tiles stacked on top of others and those blocking multiple potential matches. Look for three identical tiles visible at once - this indicates one will remain after matching two tiles, so plan accordingly. The key is to maintain multiple matching options and avoid creating situations where tiles underneath become permanently blocked.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Can I play this solitaire game on mobile devices?</div>
+            <div class="faq-answer"><p>Yes, you can play mahjongg solitaire online on mobile devices through web browsers. This online mahjong game is designed to be responsive and works seamlessly on smartphones and tablets. The touch controls make it easy to spot matching tiles and select them intuitively. This portability means you can enjoy the puzzle game wherever you are, with the same full screen and shuffle features available on desktop.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do I need to download anything to play mahjong online?</div>
+            <div class="faq-answer"><p>No download or registration is required to play mahjong solitaire for free on our site. Simply visit the page and start playing immediately in your browser. This makes it convenient to enjoy the solitaire online game anytime without installing software or creating an account. Just click and play online for free with instant access to all solitaire features.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What are the special rules for Flower and Season tiles?</div>
+            <div class="faq-answer"><p>In this matching game, flower tiles can match with any other flower tile, and season tiles can match with any other season tile, even though they display different designs. However, flowers and seasons cannot match each other. This special rule adds strategic flexibility when you play mahjong solitaire, as these tiles provide more options when planning your moves in the puzzle.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How long does a typical game take to play?</div>
+            <div class="faq-answer"><p>A typical game played can take anywhere from 5 to 20 minutes, depending on the layout complexity, your skill level, and how carefully you plan ahead. Beginners may take longer as they learn to identify matching pairs and develop strategies to match the tiles effectively. Experienced players who regularly play mahjongg solitaire can often complete layouts more quickly. The flexible time frame makes this solitaire game perfect for both quick breaks and longer gaming sessions.</p></div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Is Mahjongg Solitaire good for brain training?</div>
+            <div class="faq-answer"><p>Yes, this mahjong puzzle is excellent for brain training and cognitive health. The puzzle game improves visual perception, pattern recognition, memory, concentration, and strategic thinking skills. Regular play can help maintain mental sharpness and may even help reduce cognitive decline. The game combines mental stimulation without being stressful, making it an ideal exercise for players of all ages who want to keep their minds active and engaged through this classic game.</p></div>
+        </div>
+    </div>
+    
     <div class="bamboo-border"></div>
     <footer>
         <p>© 2025 Mahjong Solitaire. Enjoy the ancient art of tile matching.</p>
@@ -218,5 +281,16 @@
             <a target="_blank" href="https://aixcollection.com"><img src="https://aixcollection.com/assets/images/badge.png" alt="AI X Collection" height="54"></a>
         </div>
     </footer>
+
+    <script>
+        // FAQ Toggle Script
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const answer = item.nextElementSibling;
+                item.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 </html>
