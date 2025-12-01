@@ -1,1 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <script src="https://analytics.ahrefs.com/analytics.js" data-key="Kr14QjS27BdTZ+TWu3l3OQ" async></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Jouez à Mahjong Solitaire gratuitement en ligne. Maîtrisez l'ancien jeu chinois de correspondance de tuiles avec notre guide complet, règles et stratégies.">
+    <meta name="keywords" content="mahjong solitaire, jeu de mahjong, correspondance de tuiles, jeu de puzzle, mahjong gratuit">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://mahjongsolitaire-online.com/fr/">
+    <link rel="alternate" hreflang="en" href="https://mahjongsolitaire-online.com/" />
+    <link rel="alternate" hreflang="es" href="https://mahjongsolitaire-online.com/es/" />
+    <link rel="alternate" hreflang="fr" href="https://mahjongsolitaire-online.com/fr/" />
+    <link rel="alternate" hreflang="it" href="https://mahjongsolitaire-online.com/it/" />
+    <link rel="alternate" hreflang="pt" href="https://mahjongsolitaire-online.com/pt/" />
 
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🀄</text></svg>">
+    <title>Mahjong Solitaire - Jouez Gratuitement en Ligne | Jeu Classique de Correspondance de Tuiles</title>
+    
+    <style>
+        /* CSS remains exactly the same as your main file */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background: linear-gradient(135deg, #0c72ba 0%, #499385 50%, #0c72ba 100%); color: #2d3436; line-height: 1.8; }
+        header { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem 0; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); border-bottom: 3px solid #fdcb6e; position: relative; }
+        h1 { font-size: 3rem; color: #d63031; text-shadow: 2px 2px 4px rgba(255,255,255,0.5); letter-spacing: 2px; margin-bottom: 0.5rem; font-weight: bold; }
+        .subtitle { color: #2d3436; font-size: 1.2rem; font-style: italic; opacity: 0.9; }
+        .language-switcher { position: absolute; top: 1rem; right: 1rem; }
+        .language-switcher select { padding: 0.5rem; font-size: 1rem; border: 2px solid #e17055; border-radius: 4px; background: #fff8e0; color: #2d3436; cursor: pointer; }
+        .language-switcher select:focus { outline: none; border-color: #d63031; }
+        .game-container { max-width: 1200px; margin: 3rem auto; padding: 0; background: rgba(255, 234, 167, 0.3); border-radius: 12px; box-shadow: 0 8px 32px rgba(225, 112, 85, 0.4); overflow: hidden; position: relative; }
+        .game-container iframe { width: 100%; border: none; display: block; margin: 0; padding: 0; }
+        @media (min-width: 1024px) { .game-container iframe { height: 750px; } }
+        @media (min-width: 768px) and (max-width: 1023px) { .game-container { margin: 2rem 1rem; } .game-container iframe { height: 650px; } }
+        @media (max-width: 767px) { .game-container { margin: 1rem 0.5rem; border-radius: 8px; border: 2px solid #e17055; } .game-container iframe { height: 580px; } }
+        @media (max-width: 480px) { .game-container iframe { height: 520px; } }
+        .content-section { max-width: 900px; margin: 4rem auto; padding: 3rem; background: #fff8e0; border-radius: 8px; box-shadow: 0 6px 24px rgba(0,0,0,0.2); }
+        h2 { font-size: 2.2rem; color: #d63031; margin-bottom: 1.5rem; text-align: center; text-shadow: 1px 1px 2px rgba(255,255,255,0.5); border-bottom: 3px solid #fd79a8; padding-bottom: 0.5rem; }
+        h3 { font-size: 1.6rem; color: #e17055; margin: 2rem 0 1rem 0; }
+        p { margin-bottom: 1.5rem; text-align: justify; font-size: 1.1rem; }
+        .faq-item { margin-bottom: 1.5rem; background: rgba(253, 203, 110, 0.3); border-left: 4px solid #e17055; border-radius: 4px; overflow: hidden; }
+        .faq-question { font-size: 1.3rem; color: #d63031; font-weight: bold; padding: 1.5rem; cursor: pointer; user-select: none; transition: background 0.3s ease; display: flex; justify-content: space-between; align-items: center; }
+        .faq-question:hover { background: rgba(253, 203, 110, 0.5); }
+        .faq-question::after { content: '+'; font-size: 1.8rem; color: #e17055; transition: transform 0.3s ease; }
+        .faq-question.active::after { transform: rotate(45deg); }
+        .faq-answer { color: #2d3436; line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; padding: 0 1.5rem; }
+        .faq-answer.active { max-height: 500px; padding: 0 1.5rem 1.5rem 1.5rem; }
+        .review-container { display: grid; gap: 1.5rem; margin-top: 2rem; }
+        .review-item { background: rgba(253, 121, 168, 0.2); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #e17055; }
+        .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+        .reviewer-name { font-size: 1.2rem; color: #d63031; font-weight: bold; }
+        .review-stars { color: #fdcb6e; font-size: 1rem; }
+        .review-text { font-style: italic; color: #2d3436; margin-bottom: 0; }
+        .social-links { display: flex; gap: 1rem; justify-content: center; align-items: center; margin-top: 1rem; }
+        .social-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(0, 184, 148, 0.3); border: 2px solid #00b894; border-radius: 6px; color: #00b894; text-decoration: none; font-size: 1rem; font-weight: bold; transition: all 0.3s ease; cursor: pointer; }
+        .social-button:hover { background: rgba(0, 184, 148, 0.5); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 184, 148, 0.3); }
+        .social-icon { width: 24px; height: 24px; }
+        .facebook-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .facebook-svg { fill: #fff; }
+        .youtube-svg { width: 24px; height: 24px; fill: #00b894; transition: fill 0.3s ease; }
+        .social-button:hover .youtube-svg { fill: #fff; }
+        .how-to-section { background: #fff8e0; padding: 2rem; border-radius: 8px; margin: 2rem auto; max-width: 900px; }
+        .how-to-section h3 { color: #00b894; }
+        ul { margin: 1rem 0 1rem 2rem; }
+        li { margin-bottom: 0.8rem; color: #2d3436; }
+        strong { color: #d63031; }
+        footer { background: linear-gradient(180deg, #fff 0%, #fdcb6e 100%); padding: 2rem; text-align: center; margin-top: 4rem; }
+        footer p { text-align: center; margin-bottom: 0.5rem; }
+        .ornament { color: #d63031; font-size: 1.5rem; margin: 0 1rem; }
+        @media (max-width: 768px) { h1 { font-size: 2rem; } h2 { font-size: 1.8rem; } .content-section { padding: 1.5rem; margin: 2rem 1rem; } .game-container { margin: 2rem 1rem; } }
+    </style>
+</head>
+<body>
+    <div class="bamboo-border"></div>
+        <header>
+        <h1><span class="ornament">🀄</span> Mahjong Solitaire <span class="ornament">🀄</span></h1>
+        <div class="language-switcher">
+            <select onchange="location = this.value;" aria-label="Choisir la langue">
+                <option value="/">English</option>
+                <option value="/es/">Español</option>
+                <option value="/fr/" selected>Français</option>
+                <option value="/it/">Italiano</option>
+                <option value="/pt/">Português</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="game-container">
+        <iframe 
+            id="game-iframe"
+            src="https://mahjong-solitaire-enhanced.vercel.app/" 
+            frameborder="0"
+            allowfullscreen
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            scrolling="no"
+        ></iframe>
+    </div>
+
+    <div class="content-section">
+        <h2>Bienvenue à Mahjong Solitaire</h2>
+        <p>Mahjong Solitaire, également connu sous le nom de Shanghai Solitaire ou simplement Mahjong, est un jeu de puzzle captivant pour un seul joueur qui a enchanté les joueurs du monde entier pendant des décennies. Contrairement au Mahjong traditionnel, qui se joue à quatre joueurs, Mahjong Solitaire est un jeu de correspondance de tuiles qui met à l'épreuve vos compétences en reconnaissance de motifs, votre pensée stratégique et votre patience. Ce jeu intemporel trouve ses racines dans la Chine ancienne, où les tuiles de Mahjong ont été utilisées pendant des siècles dans divers jeux traditionnels.</p>
+        <p>La beauté de Mahjong Solitaire réside dans sa simplicité élégante combinée à une profondeur surprenante. Chaque jeu vous présente une pyramide ou une disposition de tuiles soigneusement organisée, empilée en plusieurs couches. Votre objectif est de vider le plateau en associant des paires de tuiles identiques, mais il y a une contrainte : vous ne pouvez sélectionner que les tuiles qui sont libres sur au moins un côté et qui n'ont pas d'autres tuiles au-dessus. Cette règle apparemment simple crée un puzzle complexe qui nécessite une planification minutieuse et une prévoyance.</p>
+        <p>Ce qui rend Mahjong Solitaire si durablement populaire, c'est son équilibre parfait entre relaxation et stimulation mentale. Le jeu offre une qualité méditative lorsque vous parcourez les motifs complexes des tuiles, à la recherche de paires correspondantes parmi les magnifiques symboles traditionnels chinois. Chaque tuile présente des images classiques de Mahjong, y compris le bambou, les cercles, les caractères, les vents, les dragons, les fleurs et les saisons. Ces dessins ornés rendent le jeu visuellement attrayant et connectent les joueurs à des siècles d'héritage culturel chinois.</p>
+        <p>Que vous soyez un débutant complet ou un joueur expérimenté, Mahjong Solitaire offre un divertissement sans fin et un exercice mental. Le jeu aiguise votre concentration, améliore la perception visuelle et renforce les compétences de mémoire en apprenant à identifier rapidement les tuiles correspondantes parmi les dispositions complexes. Chaque jeu est différent, avec d'innombrables arrangements possibles de tuiles garantissant que vous ne jouerez jamais deux fois le même jeu. La satisfaction de réussir à vider une disposition difficile est profondément gratifiante, rendant une partie supplémentaire presque irrésistible.</p>
+        <p>Les versions modernes en ligne de Mahjong Solitaire ont rendu ce jeu classique plus accessible que jamais. Vous pouvez désormais profiter de jeux illimités à tout moment et en tout lieu, avec des fonctionnalités telles que des indices, des options de mélange et des annulations de mouvements qui rendent l'expérience agréable pour les joueurs de tous niveaux de compétence. Le format numérique conserve tout le charme du jeu traditionnel tout en ajoutant des commodités qui améliorent la jouabilité. Que vous ayez cinq minutes ou une heure à consacrer, Mahjong Solitaire offre une évasion parfaite dans un monde de stratégie, de correspondance de motifs et de contemplation tranquille qui a captivé des générations d'amateurs de puzzles à travers le monde.</p>
+    </div>
+
+    <div class="content-section how-to-section">
+        <h2>Comment jouer à Mahjong Solitaire</h2>
+        <h3>Objectif du jeu</h3>
+        <p>L'objectif de Mahjong Solitaire est simple : retirer toutes les tuiles du plateau en associant des paires de tuiles identiques. Une tuile est considérée comme 'libre' et peut être sélectionnée lorsqu'elle remplit deux conditions : elle a au moins un côté long (gauche ou droit) complètement libre sans tuiles adjacentes, et elle n'a pas de tuiles au-dessus.</p>
+        <h3>Règles de base</h3>
+        <ul>
+            <li><strong>Associez des tuiles identiques :</strong> Cliquez sur deux tuiles qui ont le même symbole ou motif pour les retirer du plateau. Les tuiles doivent être identiques.</li>
+            <li><strong>Uniquement les tuiles libres :</strong> Vous ne pouvez sélectionner que les tuiles qui ne sont pas bloquées par d'autres tuiles. Une tuile est libre lorsque son côté gauche ou droit est complètement ouvert et qu'il n'y a rien empilé dessus.</li>
+            <li><strong>Tuiles spéciales :</strong> Les tuiles de Fleurs et de Saisons sont uniques. Toute tuile de Fleur peut être assortie à toute autre tuile de Fleur, et toute tuile de Saison peut être assortie à toute autre tuile de Saison, même si elles affichent des motifs différents.</li>
+            <li><strong>Planification stratégique :</strong> Réfléchissez avant de faire des correspondances. Certains mouvements peuvent bloquer d'autres tuiles et rendre le jeu impossible à compléter.</li>
+            <li><strong>Pas de limite de temps :</strong> Prenez votre temps pour analyser le plateau et planifier vos mouvements soigneusement. Mahjong Solitaire repose sur la stratégie, pas sur la vitesse.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Conseils pour réussir</h2>
+        <ul>
+            <li>Priorisez toujours le retrait des tuiles des couches supérieures en premier pour libérer plus de tuiles en dessous.</li>
+            <li>Concentrez-vous sur l'élimination des tuiles qui bloquent le plus d'autres tuiles.</li>
+            <li>Essayez de garder vos options ouvertes en maintenant plusieurs correspondances possibles sur le plateau.</li>
+            <li>Utilisez les fonctionnalités d'indices lorsque disponibles si vous êtes bloqué, mais essayez de résoudre les puzzles par vous-même pour une meilleure expérience.</li>
+            <li>S'il n'y a plus de mouvements disponibles, utilisez la fonction de mélange (si disponible) pour réorganiser les tuiles restantes.</li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Ce que disent les joueurs</h2>
+        <div class="review-container">
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Sarah M.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Je joue à Mahjong Solitaire depuis des années, et c'est de loin la meilleure version que j'ai trouvée en ligne. Les tuiles sont magnifiquement conçues, et le gameplay est fluide et relaxant. C'est devenu une partie de ma routine quotidienne, parfait pour se détendre après une longue journée de travail !</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">James T.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">En tant que novice à Mahjong Solitaire, j'ai vraiment apprécié la facilité d'apprentissage. L'interface est intuitive, et j'adore l'esthétique asiatique traditionnelle. Je suis accro depuis des semaines maintenant, et mes compétences de reconnaissance de motifs se sont nettement améliorées !</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Linda K.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">Ce jeu est absolument fantastique ! Je joue tous les matins avec mon café. Il est suffisamment stimulant pour me garder engagée, mais pas si difficile qu'il devient frustrant. La musique apaisante et les magnifiques designs des tuiles en font une expérience vraiment agréable.</p>
+            </div>
+            <div class="review-item">
+                <div class="review-header">
+                    <div class="reviewer-name">Robert H.</div>
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <p class="review-text">J'ai 67 ans et ma fille m'a recommandé ceci pour garder mon esprit vif. Je n'arrive pas à croire à quel point c'est addictif ! Le jeu fonctionne parfaitement sur ma tablette, et j'aime qu'il n'y ait pas de pression de temps. Je le recommande vivement à quiconque recherche un excellent exercice mental.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <h2>Questions fréquentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">Quelle est la différence entre Mahjong et Mahjong Solitaire ?</div>
+            <div class="faq-answer">Le Mahjong traditionnel est un jeu de stratégie à quatre joueurs impliquant compétence, stratégie et calcul, similaire au jeu de cartes Rummy. Mahjong Solitaire, en revanche, est un jeu de puzzle de correspondance de tuiles pour un seul joueur qui utilise des tuiles de Mahjong mais avec des règles et un gameplay complètement différents. Alors que le Mahjong traditionnel implique de tirer et de défausser des tuiles pour former des combinaisons spécifiques, Mahjong Solitaire se concentre uniquement sur l'association de paires de tuiles libres pour vider le plateau.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Tous les jeux de Mahjong Solitaire sont-ils gagnables ?</div>
+            <div class="faq-answer">Toutes les dispositions de Mahjong Solitaire ne sont pas garanties d'être résolubles. Le résultat dépend de l'arrangement initial des tuiles et des mouvements que vous effectuez pendant le jeu. Cependant, la plupart des jeux bien conçus utilisent des dispositions gagnables avec la bonne stratégie. Si vous vous retrouvez bloqué, de nombreuses versions en ligne offrent des fonctionnalités de mélange ou d'indices pour vous aider à continuer à jouer.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Combien de tuiles y a-t-il dans Mahjong Solitaire ?</div>
+            <div class="faq-answer">Un jeu standard de Mahjong Solitaire utilise 144 tuiles, soit le même nombre que dans un ensemble complet de Mahjong. Ces tuiles comprennent 36 tuiles de Cercles, 36 tuiles de Bambou, 36 tuiles de Caractères, 16 tuiles de Vents, 12 tuiles de Dragons, 4 tuiles de Fleurs et 4 tuiles de Saisons. Chaque tuile (sauf les Fleurs et les Saisons) apparaît exactement quatre fois dans l'ensemble.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Les tuiles de Fleurs et de Saisons peuvent-elles être assorties entre elles ?</div>
+            <div class="faq-answer">Les tuiles de Fleurs peuvent être assorties à toute autre tuile de Fleur, et les tuiles de Saisons peuvent être assorties à toute autre tuile de Saison, même si elles affichent des motifs différents. Cependant, les tuiles de Fleurs ne peuvent pas être assorties aux tuiles de Saisons. Cette règle spéciale pour ces tuiles ajoute un élément stratégique intéressant au jeu, car elles offrent plus de flexibilité lors de la planification de vos mouvements.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Quelle est la meilleure stratégie pour gagner à Mahjong Solitaire ?</div>
+            <div class="faq-answer">Les stratégies clés incluent : prioriser les tuiles qui bloquent le plus d'autres tuiles, retirer les tuiles des couches supérieures en premier pour créer plus d'options en dessous, maintenir plusieurs possibilités d'association pour éviter de se retrouver bloqué, et réfléchir à plusieurs mouvements à l'avance avant de faire une correspondance. Il est également utile d'identifier et de retirer les tuiles des bords et des coins tôt, car celles-ci sont souvent les plus restrictives. Avec la pratique, vous développerez des compétences de reconnaissance de motifs qui rendront la planification stratégique plus intuitive.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Mahjong Solitaire est-il bon pour l'entraînement cérébral ?</div>
+            <div class="faq-answer">Oui, Mahjong Solitaire est excellent pour l'entraînement cérébral et la santé cognitive. Le jeu améliore la perception visuelle, la reconnaissance de motifs, la mémoire, la concentration et les compétences de pensée stratégique. Jouer régulièrement peut aider à maintenir la netteté mentale et peut même aider à réduire le déclin cognitif. Le jeu offre une stimulation mentale sans être stressant, ce qui en fait un exercice idéal pour les joueurs de tous âges qui souhaitent garder leur esprit actif et engagé.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Combien de temps dure un jeu typique de Mahjong Solitaire ?</div>
+            <div class="faq-answer">Un jeu typique de Mahjong Solitaire peut durer entre 5 et 20 minutes, selon la complexité de la disposition, votre niveau de compétence et la minutie avec laquelle vous planifiez vos mouvements. Les débutants peuvent prendre plus de temps à mesure qu'ils apprennent à identifier les tuiles correspondantes et à développer des stratégies, tandis que les joueurs expérimentés peuvent souvent compléter les jeux plus rapidement. La flexibilité du temps de jeu rend Mahjong Solitaire parfait pour des pauses rapides comme pour des sessions de jeu plus longues.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Puis-je jouer à Mahjong Solitaire sur des appareils mobiles ?</div>
+            <div class="faq-answer">Oui, Mahjong Solitaire est largement disponible sur les appareils mobiles via les navigateurs web et les applications dédiées. La plupart des versions en ligne modernes sont conçues pour être réactives et fonctionnent parfaitement sur les smartphones et les tablettes, avec des contrôles tactiles qui rendent la sélection et l'association des tuiles intuitives et faciles. Cette portabilité permet de profiter facilement d'un jeu où que vous soyez, que ce soit en déplacement, en vous relaxant à la maison ou en prenant une pause pendant la journée.</div>
+        </div>
+    </div>
+
+    <div class="bamboo-border"></div>
+    <footer>
+        <p>© 2025 Mahjong Solitaire. Profitez de l'art ancien de la correspondance de tuiles.</p>
+        <p>🀄 Que vos correspondances soient rapides et votre stratégie sage 🀄</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61582565007493" class="social-button" target="_blank">
+                <svg class="facebook-svg" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+                <span>Facebook</span>
+            </a>
+            <a href="https://youtube.com/yourchannel" class="social-button" target="_blank">
+                <svg class="youtube-svg" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+                <span>YouTube</span>
+            </a>
+        </div>
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="https://findly.tools/mahjong-solitaire-online-game?utm_source=mahjong-solitaire-online-game" target="_blank" rel="nofollow">
+                <img src="https://findly.tools/badges/findly-tools-badge-light.svg" alt="Featured on findly.tools" width="150" style="display: inline-block;">
+            </a>
+            <a href="
